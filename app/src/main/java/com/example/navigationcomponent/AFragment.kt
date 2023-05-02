@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.example.navigationcomponent.databinding.FragmentABinding
 
 class AFragment : Fragment() {
@@ -22,10 +23,12 @@ class AFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.buttonB.setOnClickListener { button ->
-            button.navigateTo(R.id.action_AFragment_to_BFragment)
+            val action =AFragmentDirections.actionAFragmentToBFragment("hello man")
+            Navigation.findNavController(button).navigate(action)
         }
         binding.buttonC.setOnClickListener { button ->
-            button.navigateTo(R.id.action_AFragment_to_CFragment)
+            val action =AFragmentDirections.actionAFragmentToCFragment()
+            Navigation.findNavController(button).navigate(action)
         }
     }
 
