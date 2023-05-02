@@ -23,7 +23,7 @@ class AFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.buttonB.setOnClickListener { button ->
-            val action =AFragmentDirections.actionAFragmentToBFragment("hello man")
+            val action =AFragmentDirections.actionAFragmentToBFragment()
             Navigation.findNavController(button).navigate(action)
         }
         binding.buttonC.setOnClickListener { button ->

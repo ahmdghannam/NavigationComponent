@@ -10,7 +10,6 @@ import com.example.navigationcomponent.databinding.FragmentBBinding
 
 class BFragment : Fragment() {
 
-    val args: BFragmentArgs by navArgs()
     private val binding by lazy {
         FragmentBBinding.inflate(layoutInflater)
     }
@@ -23,7 +22,7 @@ class BFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.tvB.text = args.testValue
+
     }
 
 }

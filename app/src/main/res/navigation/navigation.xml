@@ -26,11 +26,6 @@
         android:name="com.example.navigationcomponent.BFragment"
         android:label="fragment_b"
         tools:layout="@layout/fragment_b" >
-        <argument
-            android:name="testValue"
-            app:argType="string"
-
-            />
     </fragment>
 
     <fragment

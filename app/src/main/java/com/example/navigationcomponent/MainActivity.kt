@@ -9,6 +9,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.setupWithNavController
 import com.example.navigationcomponent.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -22,10 +23,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-//        Navigation.findNavController(this, R.id.fragment_host)
         val navController = findNavController(R.id.fragment_host)
-
         NavigationUI.setupActionBarWithNavController(this,navController)
+        binding.bottomNavigationView.setupWithNavController(navController)
     }
 
     override fun onSupportNavigateUp(): Boolean {
